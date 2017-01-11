@@ -27,9 +27,10 @@
                     <li><a href="#">系統理念</a></li>
                     <li><a href="login.html">會員登入</a></li>
                     <li><a href="registered.html">會員註冊</a></li>
-                    <li class="current"><a href="addorder.html">訂購餐點</a></li>
-
+                    <li><a href="addorder.html">訂購餐點</a></li>
+                    <li class="current"><a href="addclass.html">排班系統</a></li>
                     <li><a href="#">班表查詢</a></li>
+                    <li><a href="#">餐點查詢</a></li>
                 </ul>
             </nav>
 
@@ -42,12 +43,18 @@
             <article class="box post">
                 <form>
                     <div class="form-group form-group-sm">
-                        <label for="dateInput">訂購日：</label>
+                        <label for="dateInput">排班日：</label>
                         <input type="date" id="dateInput" class="form-control input-sm">
 
-                        <label for="nameInput">訂購者：</label>
+                        <label for="nameInput">排班者：</label>
                         <input type="text" id="nameInput" class="form-control">
 
+                        <label for="statusInput">狀態：</label>
+                        <form id="form_name">
+                            <input type="text" name="" id="statusInput" class="form-control input-sm"
+                            value="可出餐">
+
+                        </form>
                         <label for="numberInput">份數：</label>
                         <input type="number" id="numberInput" class="form-control input-sm">
                     </div>
@@ -157,13 +164,14 @@
 <script src="assets/js/main.js"></script>
 <script type="text/javascript">
     function SendScore() {
-        $.get("https://script.google.com/macros/s/AKfycby9uFFZouaurWm1tjT5aw2bn4hwPsCfqLmdJgcGJC-s0lJepWB7/exec", {
+        $.get("https://script.google.com/macros/s/AKfycbzH9BenDl8TFTYQ_A2yaHrx_gpC7EOAb0ZnIgXLmDReQgffT1Q/exec", {
                 "date": document.getElementById("dateInput").value,
                 "name": document.getElementById("nameInput").value,
+                "status": document.getElementById("statusInput").value,
                 "number": document.getElementById("numberInput").value
             },
             function (data) {
-                alert("訂購成功\!!!!!");
+                alert("排班成功!!!!!");
             });
     }
 </script>
