@@ -11,87 +11,42 @@
 	<body class="homepage">
 		<div id="page-wrapper">
 
-			<!-- Header -->
-				<div id="header-wrapper">
-					<div id="header">
+			    <!-- Header -->
+                <div id="header-wrapper">
+                    <div id="header">
 
-						<!-- Logo -->
-						<h1><a href="index.html"></a>HI FCU <img src="images/logosmall.png" width="90vw"  alt=""></h1>
+                        <!-- Logo -->
+                        <h1><a href="index.html"></a>HI FCU <img src="images/logosmall.png" width="90vw" alt=""></h1>
 
-						<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">首頁</a></li>
-								<li><a href="#">系統理念</a></li>
-								<li><a href="login.html">會員登入</a></li>
-								<li><a href="registered.html">會員註冊</a></li>
-								<li><a href="order.html">訂購餐點</a></li>
-								<li><a href="#">班表查詢</a></li>
-								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li> -->
-								<!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
-								<!-- <li><a href="no-sidebar.html">No Sidebar</a></li> -->
-							</ul>
-						</nav>
+                        <!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="index.html">首頁</a></li>
+                                <li><a href="#">系統理念</a></li>
+                                <li class="current"><a href="login.html">會員登入</a></li>
+                                <li><a href="registered.html">會員註冊</a></li>
+                                <li><a href="order.html">訂購餐點</a></li>
+                                <li><a href="#">班表查詢</a></li>
+                            </ul>
+                        </nav>
 
-						<!-- Banner -->
-						<section id="banner">
-							<header>
-								<h2>HI,FCU 逢甲供餐系統 全面啟動</h2>
-								<p>林子婷 黃意芸 陳采慧 翁家鴻 陳怡柔 譚宇宙</p>
-							</header>
-						</section>
+                    </div>
+                </div>
 
-						<!-- Intro -->
-							<section id="intro" class="container">
-								<div class="row">
-									<div class="4u 12u(mobile)">
-										<section class="first">
-											<i class="icon featured fa-cog"></i>
-											<header>
-												<h2>HI FCU</h2>
-											</header>
-											<p>來自不同科系的六位大學生集一成</p>
-										</section>
-									</div>
-									<div class="4u 12u(mobile)">
-										<section class="middle">
-											<i class="icon featured alt fa-flash"></i>
-											<header>
-												<h2>專業</h2>
-											</header>
-											<p>結合 資訊 商業 傳播 </p>
-										</section>
-									</div>
-									<div class="4u 12u(mobile)">
-										<section class="last">
-											<i class="icon featured alt2 fa-star"></i>
-											<header>
-												<h2>全面啟動</h2>
-											</header>
-											<p>就在Hi fcu</p>
-										</section>
-									</div>
-								</div>
-								<footer>
-									<ul class="actions">
-										<li><a href="login.html" class="button big">會員登入</a></li>
-										<li><a href="#" class="button alt big">系統理念</a></li>
-									</ul>
-								</footer>
-							</section>
+			<!-- Main-->
+				<div id="main-wrapper">
+					<div class="container">
+                        <article class="box post">
+
+							    訂購日：<input type="text" id="dateInput"><br><br>
+                                訂購者：<input type="text" id="nameInput"><br><br>
+                                份數：<input type="text" id="numberInput"><br><br><br>
+
+                                <input type="button" value="送出" onclick="SendScore()">
+                        </article>
 
 					</div>
 				</div>
-
-			<!-- Main
-				<div id="main-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="12u">
-							</div>
-						</div>
-					</div>
-				</div> -->
 
 			<!-- Footer -->
 				<div id="footer-wrapper">
@@ -184,6 +139,19 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+             <script type="text/javascript">
+               function SendScore(){
+                   $.get("https://script.google.com/macros/s/AKfycby9uFFZouaurWm1tjT5aw2bn4hwPsCfqLmdJgcGJC-s0lJepWB7/exec", {
+                               "date": document.getElementById("dateInput").value,
+                               "name": document.getElementById("nameInput").value,
+                               "number": document.getElementById("numberInput").value
+                           },
+                           function (data) {
+                               document.write("--------------------------");
+                               document.write("�z�n�A�A�w�g�q�ʦ��\!!!!!");
+                               document.write("--------------------------");
+                           });
+               }
+             </script>
 	</body>
 </html>

@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Dopetrope by HTML5 UP</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <title>HI,FCU 逢甲供餐系統 </title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
 </head>
 <body class="no-sidebar">
 <div id="page-wrapper">
@@ -16,18 +18,17 @@
         <div id="header">
 
             <!-- Logo -->
-            <h1><a href="index.html"></a>HI FCU <img src="images/logosmall.png" width="90vw"  alt=""></h1>
+            <h1><a href="index.html"></a>HI FCU <img src="images/logosmall.png" width="90vw" alt=""></h1>
 
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li class="current"><a href="index.html">首頁</a></li>
+                    <li><a href="index.html">首頁</a></li>
                     <li><a href="#">系統理念</a></li>
-                    <li><a href="login.html">會員登入</a></li>
+                    <li class="current"><a href="login.html">會員登入</a></li>
+                    <li><a href="registered.html">會員註冊</a></li>
+                    <li><a href="order.html">訂購餐點</a></li>
                     <li><a href="#">班表查詢</a></li>
-                    <!-- <li><a href="left-sidebar.html">Left Sidebar</a></li> -->
-                    <!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
-                    <!-- <li><a href="no-sidebar.html">No Sidebar</a></li> -->
                 </ul>
             </nav>
 
@@ -40,29 +41,27 @@
 
             <!-- Content -->
             <article class="box post">
-                <a href="#" class="image featured"><img src="images/苗栗_170109_0003.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="images/苗栗_170109_0003.jpg" width="90vw" alt=""/></a>
                 <header>
                     <nav id="menu">
                         <ul><h2>會員登入</h2></ul>
 
-                    <ul>
+                        <ul>
+                            <form method="post" action="index.html">
+                                帳號: <input type="text" name="account"></br>
+                                密碼: <input type="text" name="password"></br>
+                                <input type="submit" value="送出">
+                            </form>
 
+                        </ul>
+                        <ul>
+                            <form method="post" action="registered.html">
+                                <input type="submit" value="註冊">
+                            </form>
+                        </ul>
 
-                    <FORM METHOD=POST ACTION="index.html">
-                        帳號: <INPUT TYPE="text" NAME="account"><BR>
-                        密碼: <INPUT TYPE="text" NAME="password"><BR>
-                        <INPUT TYPE="submit" value="送出">
-                    </FORM>
-
-                    </ul>
-                     <ul>
-                        </FORM>
-                        <FORM METHOD=POST ACTION="registered.html">
-                            <INPUT TYPE="submit" value="註冊">
-                        </FORM>
-                    </ul>
-
-                        <p>注意 : 按送出即代表同意回傳授權碼給系統<p>
+                        <p>注意 : 按送出即代表同意回傳授權碼給系統
+                        <p>
                     </nav>
                 </header>
             </article>
@@ -75,91 +74,40 @@
         <section id="footer" class="container">
             <div class="row">
                 <div class="8u 12u(mobile)">
-                    <section>
-                        <header>
-                            <h2>Blandit nisl adipiscing</h2>
-                        </header>
-                        <ul class="dates">
-                            <li>
-                                <span class="date">Jan <strong>27</strong></span>
-                                <h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
-                                <p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
-                            </li>
-                            <li>
-                                <span class="date">Jan <strong>23</strong></span>
-                                <h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
-                                <p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
-                            </li>
-                            <li>
-                                <span class="date">Jan <strong>15</strong></span>
-                                <h3><a href="#">Magna tempus lorem feugiat</a></h3>
-                                <p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
-                            </li>
-                            <li>
-                                <span class="date">Jan <strong>12</strong></span>
-                                <h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
-                                <p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
-                            </li>
-                            <li>
-                                <span class="date">Jan <strong>10</strong></span>
-                                <h3><a href="#">Blandit tempus aliquam?</a></h3>
-                                <p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
-                            </li>
-                        </ul>
-                    </section>
                 </div>
                 <div class="4u 12u(mobile)">
-                    <section>
-                        <header>
-                            <h2>What's this all about?</h2>
-                        </header>
-                        <a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
-                        <p>
-                            This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
-                            <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
-                            the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
-                        </p>
-                        <footer>
-                            <a href="#" class="button">Find out more</a>
-                        </footer>
-                    </section>
                 </div>
             </div>
             <div class="row">
                 <div class="4u 12u(mobile)">
                     <section>
                         <header>
-                            <h2>Tempus consequat</h2>
+                            <h2>about</h2>
                         </header>
                         <ul class="divided">
-                            <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                            <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                            <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                            <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                            <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                            <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+                            <li>飛飛</li>
                         </ul>
                     </section>
                 </div>
                 <div class="4u 12u(mobile)">
                     <section>
                         <header>
-                            <h2>Ipsum et phasellus</h2>
+                            <h2>功能</h2>
                         </header>
                         <ul class="divided">
-                            <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                            <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                            <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                            <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                            <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                            <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+                            <li>會員管理系統</li>
+                            <li>訂購餐點功能</li>
+                            <li>登記排班功能</li>
+                            <li>查看餐點功能</li>
+                            <li>查看排班功能</li>
+                            <li>查看排班功能</li>
                         </ul>
                     </section>
                 </div>
                 <div class="4u 12u(mobile)">
                     <section>
                         <header>
-                            <h2>Vitae tempor lorem</h2>
+                            <h2>聯絡</h2>
                         </header>
                         <ul class="social">
                             <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
@@ -170,20 +118,18 @@
                         </ul>
                         <ul class="contact">
                             <li>
-                                <h3>Address</h3>
+                                <h3>地址</h3>
                                 <p>
-                                    Untitled Incorporated<br />
-                                    1234 Somewhere Road Suite<br />
-                                    Nashville, TN 00000-0000
+                                    台中市西屯區文華路100號
                                 </p>
                             </li>
                             <li>
-                                <h3>Mail</h3>
-                                <p><a href="#">someone@untitled.tld</a></p>
+                                <h3>信箱</h3>
+                                <p><a href="#">hifcu6@gmail.com</a></p>
                             </li>
                             <li>
-                                <h3>Phone</h3>
-                                <p>(800) 000-0000</p>
+                                <h3>電話</h3>
+                                <p>04-2451 7250</p>
                             </li>
                         </ul>
                     </section>
@@ -195,7 +141,8 @@
                     <!-- Copyright -->
                     <div id="copyright">
                         <ul class="links">
-                            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; Untitled. All rights reserved.</li>
+                            <li>Design: HI FCU</li>
                         </ul>
                     </div>
 
@@ -203,7 +150,6 @@
             </div>
         </section>
     </div>
-
 </div>
 
 <!-- Scripts -->
@@ -212,7 +158,8 @@
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/skel-viewport.min.js"></script>
 <script src="assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
 </body>
