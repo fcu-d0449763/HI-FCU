@@ -10,7 +10,7 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
 </head>
-<body class="no-sidebar">
+<body class="homepage">
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -25,9 +25,10 @@
                 <ul>
                     <li><a href="index.html">首頁</a></li>
                     <li><a href="#">系統理念</a></li>
-                    <li class="current"><a href="login.html">會員登入</a></li>
+                    <li><a href="login.html">會員登入</a></li>
                     <li><a href="registered.html">會員註冊</a></li>
-                    <li><a href="addorder.html">訂購餐點</a></li>
+                    <li class="current"><a href="addorder.html">訂購餐點</a></li>
+
                     <li><a href="#">班表查詢</a></li>
                 </ul>
             </nav>
@@ -35,35 +36,25 @@
         </div>
     </div>
 
-    <!-- Main -->
+    <!-- Main-->
     <div id="main-wrapper">
         <div class="container">
-
-            <!-- Content -->
             <article class="box post">
-                <a href="#" class="image featured"><img src="images/苗栗_170109_0003.jpg" width="90vw" alt=""/></a>
-                <header>
-                    <nav id="menu">
-                        <ul><h2>會員登入</h2></ul>
+                <form>
+                    <div class="form-group form-group-sm">
+                        <label for="dateInput">訂購日：</label>
+                        <input type="date" id="dateInput" class="form-control input-sm">
 
-                        <ul>
-                            <form method="post" action="index.html">
-                                帳號: <input type="text" name="account"></br>
-                                密碼: <input type="text" name="password"></br>
-                                <input type="submit" value="送出">
-                            </form>
+                        <label for="nameInput">訂購者：</label>
+                        <input type="text" id="nameInput" class="form-control">
 
-                        </ul>
-                        <ul>
-                            <form method="post" action="registered.html">
-                                <input type="submit" value="註冊">
-                            </form>
-                        </ul>
+                        <label for="numberInput">份數：</label>
+                        <input type="number" id="numberInput" class="form-control input-sm">
+                    </div>
+                    <br>
 
-                        <p>注意 : 按送出即代表同意回傳授權碼給系統
-                        <p>
-                    </nav>
-                </header>
+                    <input type="button" value="送出" onclick="SendScore()">
+                </form>
             </article>
 
         </div>
@@ -150,6 +141,7 @@
             </div>
         </section>
     </div>
+
 </div>
 
 <!-- Scripts -->
@@ -158,9 +150,22 @@
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/skel-viewport.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
-
+<script type="text/javascript">
+    function SendScore() {
+        $.get("https://script.google.com/macros/s/AKfycby9uFFZouaurWm1tjT5aw2bn4hwPsCfqLmdJgcGJC-s0lJepWB7/exec", {
+                "date": document.getElementById("dateInput").value,
+                "name": document.getElementById("nameInput").value,
+                "number": document.getElementById("numberInput").value
+            },
+            function (data) {
+                alert("訂購成功\!!!!!");
+            });
+    }
+</script>
 </body>
 </html>
